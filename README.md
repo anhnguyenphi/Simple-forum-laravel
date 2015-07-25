@@ -1,6 +1,6 @@
 # Simple-blog-laravel
 
-Blog use [laravel 5 framework](https://github.com/laravel/laravel, that is a PHP Framework For Web Artisans.
+Blog use [laravel 5 framework](https://github.com/laravel/laravel), that is a PHP Framework For Web Artisans.
 
 ### Installation
 
