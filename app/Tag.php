@@ -4,20 +4,19 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Article extends Model
+class Tag extends Model
 {
     // The database table used by the model.
-    protected $table = 'articles';
+    protected $table = 'tags';
     // The attributes that are mass assignable.
     protected $fillable = [
-    	'title',
-    	'content'
+    	'tag'
     ];
     /**
-     * The tag that belong to the article.
+     * The article that belong to the tag.
      */
-    public function tag()
+    public function article()
     {
-        return $this->belongsToMany('App\Tag');
+        return $this->belongsToMany('App\Article');
     }
 }

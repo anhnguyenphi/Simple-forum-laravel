@@ -51,7 +51,7 @@ Route::delete('/articles/{id}',[
 	'as' => 'articles.destroy',
 	'uses' => 'ArticlesController@destroy'	
 ]);
-
+// Show Article
 Route::get('/articles/{id}', [
 	'as' 	=>	'article.show',
 	'uses' 	=>	'ArticlesController@show'

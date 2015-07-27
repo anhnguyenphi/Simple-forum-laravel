@@ -15,7 +15,7 @@
 			</ul>
 		</div>
 	@endif
-	{!! Form::model($article ,array(
+	{!! Form::model($article,array(
 			'route' => array('articles.update', $article->id),
 			'method' => 'PUT',
 			'class' => 'form-horizontal'
@@ -26,6 +26,11 @@
 			{!! Form::label('title','Title', array('class' => 'col-sm-2')) !!}
 			{!! Form::text('title', null, array('id' => 'title', 'class' => 'form-control', 'required' => 'true', 'placeholder' => 'Fill your title')) !!}
 		</div>
+		<div class="form-group"> 
+			{!! Form::label('tag','Tags', array('class' => 'col-sm-2')) !!}
+			{!! Form::text('tag', $article->tag->first()->tag, array('id' => 'tag', 'class' => 'form-control', 'required' => 'true', 'placeholder' => 'Fill your tag')) !!}
+		</div>
+
 		<div class="form-group"> 
 			{!! Form::label('content','Content', array('class' => 'col-sm-2')) !!}
 			{!! Form::textarea('content', null, array('row' => '7','id' => 'content', 'class' => 'form-control', 'required' => 'true', 'placeholder' => 'Fill your content')) !!}

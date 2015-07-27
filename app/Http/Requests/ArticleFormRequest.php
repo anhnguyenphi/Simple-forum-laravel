@@ -24,7 +24,8 @@ class ArticleFormRequest extends Request
     public function rules()
     {
         return [
-            'title' => 'required|between:10,255',
+            'title' => 'required|between:3,255',
+            'tag' => 'required|max:10',
             'content' => 'required|min:20'
         ];
     }
