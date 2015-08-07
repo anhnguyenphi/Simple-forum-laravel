@@ -1,11 +1,11 @@
-# Simple-blog-laravel
+# Simple-forum-laravel
 
-Blog use [laravel 5 framework](https://github.com/laravel/laravel), that is a PHP Framework For Web Artisans.
+Forum use [laravel 5 framework](https://github.com/laravel/laravel), that is a PHP Framework For Web Artisans.
 
 ### Installation
 
 ```sh
-$ git clone [git-repo-url] Simple-blog-laravel
-$ cd Simple-blog-laravel
+$ git clone [git-repo-url] Simple-forum-laravel
+$ cd Simple-forum-laravel
 $ php artisan serve
 ```
