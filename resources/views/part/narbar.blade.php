@@ -1,7 +1,7 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav id="navbar" class="navbar navbar-default" role="navigation">
 	<!-- Brand and toggle get grouped for better mobile display -->
 	<div class="navbar-header">
-		<a class="navbar-brand" href="{{ route('home') }}">Lavarel Blog</a>
+		<a class="navbar-brand" href="{{ route('home') }}">Lavarel 4rum</a>
 	</div>
 
 	<!-- Collect the nav links, forms, and other content for toggling -->

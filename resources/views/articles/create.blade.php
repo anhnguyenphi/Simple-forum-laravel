@@ -17,20 +17,46 @@
 	@endif
 	{!! Form::open(array('route' => 'articles.store', 'method' => 'POST', 'class' => 'form-horizontal')) !!}
 		<div class="form-group"> 
-			{!! Form::label('title','Title', array('class' => 'col-sm-2')) !!}
-			{!! Form::text('title', null, array('id' => 'title', 'class' => 'form-control', 'required' => 'true', 'placeholder' => 'Fill your title')) !!}
+			{!! Form::label('title','Title', [
+				'class' => 'col-sm-2'
+			]) !!}
+			{!! Form::text('title', null, [
+				'id' => 'title', 
+				'class' => 'form-control', 
+				'required' => 'true', 
+				'placeholder' => 'Fill your title',
+				'autocomplete' => 'off'
+			]) !!}
 		</div>
 		<div class="form-group"> 
-			{!! Form::label('tag','Tags', array('class' => 'col-sm-2')) !!}
-			{!! Form::text('tag', null, array('id' => 'tag', 'class' => 'form-control', 'required' => 'true', 'placeholder' => 'Fill your Tags')) !!}
+			{!! Form::label('tag','Tags', [
+				'class' => 'col-sm-2'
+			]) !!}
+			{!! Form::text('tag', null, [
+				'id' => 'tag', 
+				'class' => 'form-control', 
+				'required' => 'true', 
+				'placeholder' => 'Fill your Tags',
+				'autocomplete' => 'off'
+			]) !!}
 		</div>
 		<div class="form-group"> 
-			{!! Form::label('content','Content', array('class' => 'col-sm-2')) !!}
-			{!! Form::textarea('content', null, array('row' => '7','id' => 'content', 'class' => 'form-control', 'required' => 'true', 'placeholder' => 'Fill your content')) !!}
+			{!! Form::label('content','Content', [
+				'class' => 'col-sm-2'
+			]) !!}
+			{!! Form::textarea('content', null, [
+				'row' => '7',
+				'id' => 'content', 
+				'class' => 'form-control', 
+				'required' => 'true', 
+				'placeholder' => 'Fill your content'
+			]) !!}
 		</div>
 		<div class="form-group"> 
 			<div style="display: inline"> 
-				{!! Form::submit('Create',array('class' => 'btn btn-primary')) !!}
+				{!! Form::submit('Create',[
+					'class' => 'btn btn-primary'
+				]) !!}
 				<a class="btn btn-default" href="{{ route('home') }}" role="button">Cancel</a>
 			</div>
 		</div>

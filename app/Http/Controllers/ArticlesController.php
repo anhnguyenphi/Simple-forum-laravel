@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// Model
 use App\Article;
 use App\Tag;
+
+use Input;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Input;
 use App\Http\Requests\ArticleFormRequest;
 class ArticlesController extends Controller
 {
@@ -51,10 +53,12 @@ class ArticlesController extends Controller
     }
     // update articles after edit
     public function update($id, ArticleFormRequest $request) {
+        // update Article
         $article = Article::find($id);
         $article->title = $request->input('title');
         $article->content = $request->input('content');
-
+        $article->save();
+        // update Tag
         $newTag = $request->input('tag');
         // check same tag
         $oldTag = $article->tag->first();

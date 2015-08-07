@@ -17,17 +17,34 @@
 			</ul>
 		</div>
 	@endif
-	{!! Form::open(['route' => 'auth.login.get', 'method' => 'POST', 'class' => 'form-horizontal', 'style' => 'display: block;']) !!}
+	{!! Form::open([
+		'route' => 'auth.login.get',
+		'method' => 'POST', 
+		'class' => 'form-horizontal', 
+		'style' => 'display: block;']
+	) !!}
 		<div class="form-group">
 			<div class="input-group">
 				<span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
-				{!! Form::text('email',old('email'), ['id' => 'email', 'class' => 'form-control', 'required' => 'true', 'placeholder' => 'Email address']) !!}
+				{!! Form::text('email',old('email'), [
+					'id' => 'email', 
+					'class' => 'form-control', 
+					'required' => 'true', 
+					'placeholder' => 'Email address',
+					'autocomplete' => 'off'
+				]) !!}
 			</div>				
 		</div>
 		<div class="form-group">
 			<div class="input-group">
 				<span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-lock"></i></span>
-				{!! Form::password('password',['id' => 'password', 'class' => 'form-control', 'required' => 'true', 'placeholder' => 'Password']) !!}
+				{!! Form::password('password',[
+					'id' => 'password', 
+					'class' => 'form-control', 
+					'required' => 'true', 
+					'placeholder' => 'Password',
+					'autocomplete' => 'off'
+				]) !!}
 			</div>
 		</div>
 		<div class="form-group checkbox">
@@ -37,7 +54,9 @@
 		</div>
 		<div class="col-xs-5 col-xs-offset-3">
 			<div class="form-group"> 
-				{!! Form::submit('Sign in',array('class' => 'form-control btn btn-primary')) !!}	
+				{!! Form::submit('Sign in',[
+					'class' => 'form-control btn btn-primary'
+				]) !!}	
 			</div>
 		</div>
 	{!! Form::close() !!}
