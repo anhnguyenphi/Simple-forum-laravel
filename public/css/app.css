@@ -1,8 +1,19 @@
 body, html{
  	height: 100%;
 }
+#title {
+	text-decoration: none;
+	color: white;
+}
+#main a {
+    color: #1B5E20;
+}
+a:hover {
+    text-decoration: none;
+}
 
 #main {
+	padding-top: 14px;	
 	min-height: 100%;
 }
 #infoPost {
@@ -20,7 +31,7 @@ body, html{
 	color: white;
 	padding-top: 25px;
 	padding-bottom: 10px;
-	background-color: #7f8c8d;
+	background-color: #004D40;
 	position: absolute;
 	left: 0;
     right: 0;
