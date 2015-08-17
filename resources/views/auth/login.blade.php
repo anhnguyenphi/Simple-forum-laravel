@@ -4,6 +4,7 @@
 @stop
 
 @section('content')
+	<div class="col-md-6 col-md-offset-3">
 	<div class="panel-body">
 	<h2>Login</h2>
 	<br>
@@ -23,43 +24,40 @@
 		'class' => 'form-horizontal', 
 		'style' => 'display: block;']
 	) !!}
-		<div class="form-group">
-			<div class="input-group">
-				<span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
-				{!! Form::text('email',old('email'), [
-					'id' => 'email', 
-					'class' => 'form-control', 
-					'required' => 'true', 
-					'placeholder' => 'Email address',
-					'autocomplete' => 'off'
-				]) !!}
-			</div>				
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+			{!! Form::text('email',old('email'), [
+				'id' => 'email', 
+				'class' => 'mdl-textfield__input', 
+				'required' => 'true', 
+				'autocomplete' => 'off'
+			]) !!}
+			<label class="mdl-textfield__label" for="email">Email</label>
+		</div>	
+		<br>	
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">			
+			{!! Form::password('password',[
+				'id' => 'password', 
+				'class' => 'mdl-textfield__input', 
+				'required' => 'true',
+				'autocomplete' => 'off'
+			]) !!}
+			<label class="mdl-textfield__label" for="password">Password</label>
 		</div>
-		<div class="form-group">
-			<div class="input-group">
-				<span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-lock"></i></span>
-				{!! Form::password('password',[
-					'id' => 'password', 
-					'class' => 'form-control', 
-					'required' => 'true', 
-					'placeholder' => 'Password',
-					'autocomplete' => 'off'
-				]) !!}
-			</div>
-		</div>
+
 		<div class="form-group checkbox">
-			<label>
-				<input name="remember" type="checkbox" value="Remember me">Remember me
+			<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="remember">
+			  <input type="checkbox" name="remember" id="remember" class="mdl-checkbox__input" checked />
+			  <span class="mdl-checkbox__label">Remember me</span>
 			</label>
 		</div>
-		<div class="col-xs-5 col-xs-offset-3">
+		<div class="col-xs-5 col-xs-offset-2">
 			<div class="form-group"> 
 				{!! Form::submit('Sign in',[
-					'class' => 'form-control btn btn-primary'
+					'class' => 'loginbutton mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'
 				]) !!}	
 			</div>
 		</div>
 	{!! Form::close() !!}
 	</div>
-
+	</div>
 @stop

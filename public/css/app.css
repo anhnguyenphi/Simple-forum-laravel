@@ -11,10 +11,13 @@ body, html{
 a:hover {
     text-decoration: none;
 }
+.loginbutton {
+	display:inline-block;
+	min-width: 160px;
+}
 
 #main {
 	padding-top: 14px;	
-	min-height: 100%;
 }
 #infoPost {
 	display: inline;	

@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	<div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
 		@include('part/narbar')
 		<main class="mdl-layout__content" id="main">
 	    	<div class="page-content">

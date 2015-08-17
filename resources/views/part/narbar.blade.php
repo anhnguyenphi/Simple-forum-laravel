@@ -1,4 +1,4 @@
-<header class="mdl-layout__header">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
 	<div class="mdl-layout__header-row">
   <!-- Title -->
   <span class="mdl-layout-title"><a id="title" href="{{ route('home') }}">Laravel 4rum</a></span>
