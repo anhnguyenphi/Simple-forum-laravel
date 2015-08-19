@@ -12,14 +12,14 @@
 				</li>
 				@if (Auth::check())
 			  	<li>
-			  		<a href="{{ route('articles.edit', $article->id) }}" class="btn btn-default btn-mini" role="button">Edit</a>
+			  		<a href="{{ route('articles.edit', $article->id) }}" class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" role="button">Edit</a>
 			  	</li>
 			  	<li>
 			  		{!! Form::open([
 			  			'route' => ['articles.destroy', $article->id],
 			  			'method' => 'DELETE',
 			  		]) !!}
-						<button type="submit" class="btn btn-default btn-mini">Delete</button>  		
+						<button type="submit" class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect">Delete</button>  		
 			  		{!! Form::close() !!}
 			  	</li>
 			  	@endif
@@ -44,5 +44,15 @@
 			<br>
 			<p>{{ $article->content }}</p>
 		</div>
+	</div>
+	<div class="row">
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.4";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 	</div>
 @stop

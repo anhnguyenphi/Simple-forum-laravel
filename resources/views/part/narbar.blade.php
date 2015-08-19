@@ -1,7 +1,7 @@
   <header class="mdl-layout__header mdl-layout__header--scroll">
 	<div class="mdl-layout__header-row">
   <!-- Title -->
-  <span class="mdl-layout-title"><a id="title" href="{{ route('home') }}">Laravel 4rum</a></span>
+  <span class="mdl-layout-title"><a id="brand" href="{{ route('home') }}">Laravel 4rum</a></span>
   <!-- Add spacer, to align navigation to the right -->
   <div class="mdl-layout-spacer"></div>
   <!-- Navigation. We hide it in small screens. -->

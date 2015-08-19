@@ -1,7 +1,10 @@
 body, html{
  	height: 100%;
 }
-#title {
+.fixedinput {
+	width: 800px;
+}
+#brand {
 	text-decoration: none;
 	color: white;
 }
